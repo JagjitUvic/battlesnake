@@ -213,7 +213,7 @@ def start():
 
     return json.dumps({
         'name': snakeName,
-        'taunt': 'My dad gave me a small loan of a million dollars!'
+        'taunt': 'My dad gave me a small loan of a million dollars!',
         'color': '#8B3626'
     })
 
