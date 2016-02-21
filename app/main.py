@@ -249,7 +249,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    data = data['data'];
+    #data = data['data'];
 
     # TODO: Do things with data
 
