@@ -264,6 +264,8 @@ def move():
             ourSnake = snake
             break
 
+    print(ourSnake);
+
     grid = Grid(data['width'], data['height'])  # makes base grid
     for snake in data['snakes']:  # sorts through snakes
         for coord in snake['coords']:  # get all snake coords
