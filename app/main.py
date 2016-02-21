@@ -13,6 +13,10 @@ taunts = ['a', 'b', 'c', 'd']
 
 tauntsLength = len(taunts) - 1
 
+false = False
+true = True
+null = None
+
 ######
 
 snakeName = 'nebuchadnezzar'
