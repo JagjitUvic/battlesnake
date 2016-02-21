@@ -249,7 +249,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    print(data)
+
     #data = data['data'];
 
     # TODO: Do things with data
@@ -264,7 +264,7 @@ def move():
             ourSnake = snake
             break
 
-    grid = Grid(len(data['board'][0]), len(data['board']))  # makes base grid
+    grid = Grid(data['width'], data['height'])  # makes base grid
     for snake in data['snakes']:  # sorts through snakes
         for coord in snake['coords']:  # get all snake coords
             grid.obstruct(tuple(coord))  # make obstructions
@@ -332,7 +332,7 @@ def move():
             simpleMovements = True
 
     if simpleMovements:
-        bGrid = Grid(len(data['board'][0]), len(data['board']))  # makes base grid
+        bGrid = Grid(data['width'], data['height'])  # makes base grid
         for snake in data['snakes']:  # sorts through snakes
             for coord in snake['coords']:  # get all snake coords
                 bGrid.obstruct(tuple(coord))  # make obstructions
@@ -365,7 +365,7 @@ def move():
 
     if not grid.contains(transpos) or grid.obstructed(transpos):
 
-        cGrid = Grid(len(data['board'][0]), len(data['board']))  # makes base grid
+        cGrid = Grid(data['width'], data['height'])  # makes base grid
         for snake in data['snakes']:  # sorts through snakes
             for coord in snake['coords']:  # get all snake coords
                 cGrid.obstruct(tuple(coord))  # make obstructions
