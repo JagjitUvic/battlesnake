@@ -9,7 +9,7 @@ import os
 
 # taunts madafaka
 
-taunts = ['a', 'b', 'c', 'd']
+taunts = ['I am the one', 'Hisssssss', 'Eaat all the appppllles', 'My dad gave me a small loan of a million dollars']
 
 tauntsLength = len(taunts) - 1
 
@@ -243,7 +243,7 @@ def start():
     
     # TODO: Do things with data
     return {
-        'taunt':'Test Taunt'
+        'taunt':'Hissssssssssss'
     }
 
 
@@ -391,7 +391,7 @@ def move():
 @bottle.post('/end')
 def end():
     return {
-        'taunt':'Test Taunt end'
+        'taunt':'Balle Balle Ho gyi'
     }
 
 # Expose WSGI app (so gunicorn can find it)
