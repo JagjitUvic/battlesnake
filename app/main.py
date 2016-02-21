@@ -15,7 +15,7 @@ tauntsLength = len(taunts) - 1
 
 ######
 
-snakeName = 'snakes-on-a-plane'
+snakeName = 'nebuchadnezzar'
 directions = {
     (-1, 0): 'left',
     (1, 0): 'right',
