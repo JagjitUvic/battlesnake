@@ -235,8 +235,7 @@ def index():
 
 @bottle.post('/start')
 def start():
-    data = bottle.request.json
-
+    
     # TODO: Do things with data
     return {
         'taunt':'Test Taunt'
@@ -246,6 +245,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    data = data['data'];
 
     # TODO: Do things with data
 
@@ -382,11 +382,9 @@ def move():
 
 @bottle.post('/end')
 def end():
-    data = bottle.request.json
-
-    # TODO: Do things with data
-
-    return json.dumps({})
+    return {
+        'taunt':'Test Taunt end'
+    }
 
 # Expose WSGI app (so gunicorn can find it)
 
