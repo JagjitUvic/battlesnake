@@ -20,6 +20,7 @@ null = None
 ######
 
 snakeName = 'nebuchadnezzar'
+snakeId = '98835e3e-c861-41c0-88aa-98d58fce2fef'
 directions = {
     (-1, 0): 'left',
     (1, 0): 'right',
@@ -260,7 +261,7 @@ def move():
      # Find our snake
 
     for snake in data['snakes']:
-        if snake['name'] == snakeName:
+        if snake['id'] == snakeId:
             ourSnake = snake
             break
 
@@ -270,7 +271,7 @@ def move():
     for snake in data['snakes']:  # sorts through snakes
         for coord in snake['coords']:  # get all snake coords
             grid.obstruct(tuple(coord))  # make obstructions
-        if snake['name'] != snakeName:  # if snake is not our snake
+        if snake['id'] != snakeId:  # if snake is not our snake
             for direction in directions:  # make all snake heads a obstruction
                 if len(snake['coords']) >= len(ourSnake['coords']):  # if other snake larger, then obstruct where it can move to
                     head = snake['coords'][0]  #
@@ -285,7 +286,7 @@ def move():
         dist = manDist(tuple(ourSnake['coords'][0]), tuple(food))
         skip = False
         for snake in data['snakes']:
-            if snake['name'] != snakeName \
+            if snake['id'] != snakeId \
                 and manDist(tuple(snake['coords'][0]), tuple(food)) \
                 <= dist:
                 skip = True
