@@ -223,8 +223,8 @@ def move():
     data = bottle.request.json
 
     # TODO: Do things with data
-    move = None
-	ourSnake = None
+    move = None;
+    ourSnake = None;
 
  	# Find our snake
  	for snake in data['snakes']:
