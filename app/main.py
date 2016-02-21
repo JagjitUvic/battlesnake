@@ -238,10 +238,9 @@ def start():
     data = bottle.request.json
 
     # TODO: Do things with data
-
-    return json.dumps({'name': snakeName,
-                      'taunt': 'My dad gave me a small loan of a million dollars!'
-                      , 'color': '#8B3626'})
+    return {
+        'taunt':'Test Taunt'
+    }
 
 
 @bottle.post('/move')
@@ -378,7 +377,7 @@ def move():
                 move = directions[direction]
                 break
 
-    return {'move': move, 'taunt': taunts[random.randint(0, lenTList)]}
+    return {'move': move, 'taunt': taunts[random.randint(0, tauntsLength)]}
 
 
 @bottle.post('/end')
