@@ -22,10 +22,10 @@ null = None
 snakeName = 'nebuchadnezzar'
 snakeId = '98835e3e-c861-41c0-88aa-98d58fce2fef'
 directions = {
-    (-1, 0): 'west',
-    (1, 0): 'east',
-    (0, -1): 'north',
-    (0, 1): 'south',
+    (-1, 0): 'left',
+    (1, 0): 'right',
+    (0, -1): 'up',
+    (0, 1): 'down',
     }
 
 trapSamples = 20
